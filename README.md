@@ -6,6 +6,13 @@
 
 ## デプロイ手順
 
+### 準備
+
+```sh
+$ cd cdk
+$ yarn install
+```
+
 ### ECR Stack デプロイ
 
 ```sh
@@ -16,8 +23,8 @@ $ make deploy
 ### DynamoDB Stack デプロイ
 
 ```sh
-make diff-prd STACK_NAME=DynamoDB ENVCODE=prd
-make deploy-prd STACK_NAME=DynamoDB ENVCODE=prd
+$ make diff-prd STACK_NAME=DynamoDB ENVCODE=prd
+$ make deploy-prd STACK_NAME=DynamoDB ENVCODE=prd
 ```
 
 ### Secret Manager に環境変数追加
@@ -53,6 +60,6 @@ make deploy-prd STACK_NAME=DynamoDB ENVCODE=prd
 ### Api Stack デプロイ
 
 ```sh
-make diff-prd STACK_NAME=Api ENVCODE=prd
-make deploy-prd STACK_NAME=Api ENVCODE=prd
+$ make diff-prd STACK_NAME=Api ENVCODE=prd
+$ make deploy-prd STACK_NAME=Api ENVCODE=prd
 ```
